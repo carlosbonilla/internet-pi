@@ -16,9 +16,9 @@ services:
     image: pihole/pihole:latest
     hostname: '{{ pihole_hostname }}'
     ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      - "67:67/udp"
+      - "5300:53/tcp"
+      - "5300:53/udp"
+      - "6700:67/udp"
 {% if domain_name_enable and domain_name and domain_pihole %}
       - "38080:80/tcp"
 {% else %}
